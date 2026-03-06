@@ -1,0 +1,3 @@
+module.exports=[7167,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(80894);a.n(d("[project]/PartyDial/PartyDial/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},53832,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(80894);a.n(d("[project]/PartyDial/PartyDial/node_modules/next/dist/client/components/builtin/global-error.js"))},55730,a=>{"use strict";a.i(7167);var b=a.i(53832);a.n(b)}];
+
+//# sourceMappingURL=76bbb_next_dist_client_components_builtin_global-error_d55ad87e.js.map

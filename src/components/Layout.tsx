@@ -1,13 +1,16 @@
+"use client";
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import React, { useState } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Users, 
-  Building2, 
-  FileText, 
-  BarChart3, 
-  MessageSquare, 
-  CreditCard, 
+
+import {
+  LayoutDashboard,
+  Users,
+  Building2,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  CreditCard,
   Settings,
   Search,
   Bell,
@@ -37,8 +40,8 @@ const ADMIN_LINKS = [
   { name: 'Settings', href: '/admin/settings', icon: Settings },
 ];
 
-export function DashboardLayout({ role = 'vendor' }: { role?: 'vendor' | 'admin' }) {
-  const location = useLocation();
+export function DashboardLayout({ role = 'vendor', children }: { role?: 'vendor' | 'admin', children: React.ReactNode }) {
+  const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const links = role === 'admin' ? ADMIN_LINKS : VENDOR_LINKS;
 
@@ -46,7 +49,7 @@ export function DashboardLayout({ role = 'vendor' }: { role?: 'vendor' | 'admin'
     <div className="min-h-screen bg-party-light flex font-sans text-party-dark">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -58,26 +61,25 @@ export function DashboardLayout({ role = 'vendor' }: { role?: 'vendor' | 'admin'
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="h-16 flex items-center justify-between px-6 border-b border-gray-200">
-          <Link to="/" className="text-2xl font-display font-bold text-gradient">
+          <Link href="/" className="text-2xl font-display font-bold text-gradient">
             PartyDial
           </Link>
           <button className="lg:hidden text-gray-500 hover:text-party-dark" onClick={() => setSidebarOpen(false)}>
             <X className="w-5 h-5" />
           </button>
         </div>
-        
+
         <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
           {links.map((link) => {
-            const isActive = location.pathname === link.href;
+            const isActive = pathname === link.href;
             return (
-              <Link
-                key={link.name}
-                to={link.href}
+              <Link key={link.name}
+                href={link.href}
                 onClick={() => setSidebarOpen(false)}
                 className={cn(
                   'flex items-center px-3 py-2.5 text-sm font-medium rounded-xl transition-colors',
-                  isActive 
-                    ? 'bg-party-purple/10 text-party-purple' 
+                  isActive
+                    ? 'bg-party-purple/10 text-party-purple'
                     : 'text-gray-600 hover:bg-gray-50 hover:text-party-dark'
                 )}
               >
@@ -107,14 +109,14 @@ export function DashboardLayout({ role = 'vendor' }: { role?: 'vendor' | 'admin'
           <div className="flex-1 max-w-md hidden sm:block">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <input 
-                type="text" 
-                placeholder="Search leads, venues..." 
+              <input
+                type="text"
+                placeholder="Search leads, venues..."
                 className="w-full pl-10 pr-4 py-2 bg-gray-50 border-none rounded-full text-sm focus:ring-2 focus:ring-party-purple/20 transition-all"
               />
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-3 md:space-x-4 ml-auto">
             <button className="relative p-2 text-gray-400 hover:text-party-dark transition-colors">
               <Bell className="h-5 w-5" />
@@ -130,7 +132,7 @@ export function DashboardLayout({ role = 'vendor' }: { role?: 'vendor' | 'admin'
 
         {/* Page Content */}
         <div className="flex-1 p-4 md:p-8 overflow-x-hidden">
-          <Outlet />
+          {children}
         </div>
       </main>
     </div>

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/vendor/layout,_N_T_/vendor/quote/layout,_N_T_/vendor/quote/page,_N_T_/vendor/quote"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/vendor/quote/__PAGE__",
+    "/vendor/quote",
+    "/vendor",
+    "/_index",
+    "/_head"
+  ]
+}

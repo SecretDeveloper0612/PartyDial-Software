@@ -1,0 +1,185 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/venue/[id]",
+      "regex": "^/venue/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/venue/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/analytics",
+      "regex": "^/admin/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/leads",
+      "regex": "^/admin/leads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/leads(?:/)?$"
+    },
+    {
+      "page": "/admin/payments",
+      "regex": "^/admin/payments(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/payments(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/admin/vendors",
+      "regex": "^/admin/vendors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/vendors(?:/)?$"
+    },
+    {
+      "page": "/mobile-app",
+      "regex": "^/mobile\\-app(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mobile\\-app(?:/)?$"
+    },
+    {
+      "page": "/post-requirement",
+      "regex": "^/post\\-requirement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/post\\-requirement(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/search",
+      "regex": "^/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/search(?:/)?$"
+    },
+    {
+      "page": "/vendor",
+      "regex": "^/vendor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor(?:/)?$"
+    },
+    {
+      "page": "/vendor/analytics",
+      "regex": "^/vendor/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/analytics(?:/)?$"
+    },
+    {
+      "page": "/vendor/leads",
+      "regex": "^/vendor/leads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/leads(?:/)?$"
+    },
+    {
+      "page": "/vendor/messages",
+      "regex": "^/vendor/messages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/messages(?:/)?$"
+    },
+    {
+      "page": "/vendor/quote",
+      "regex": "^/vendor/quote(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/quote(?:/)?$"
+    },
+    {
+      "page": "/vendor/settings",
+      "regex": "^/vendor/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/settings(?:/)?$"
+    },
+    {
+      "page": "/vendor/subscription",
+      "regex": "^/vendor/subscription(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/subscription(?:/)?$"
+    },
+    {
+      "page": "/vendor/venue",
+      "regex": "^/vendor/venue(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendor/venue(?:/)?$"
+    },
+    {
+      "page": "/vendors",
+      "regex": "^/vendors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vendors(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

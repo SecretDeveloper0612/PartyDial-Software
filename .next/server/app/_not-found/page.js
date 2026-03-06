@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/PartyDial_PartyDial_29134a16._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__fbac47ad._.js")
+R.c("server/chunks/ssr/76bbb_next_dist_esm_build_templates_app-page_ff2996ce.js")
+R.c("server/chunks/ssr/[root-of-the-server]__484c124a._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__9ae9aaa3._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ea16778f._.js")
+R.c("server/chunks/ssr/PartyDial_PartyDial_src_app_layout_tsx_a58f0e2f._.js")
+R.c("server/chunks/ssr/76bbb_next_dist_client_components_623aeca0._.js")
+R.c("server/chunks/ssr/76bbb_next_dist_client_components_builtin_forbidden_29a0c5f7.js")
+R.c("server/chunks/ssr/PartyDial_PartyDial__next-internal_server_app__not-found_page_actions_830781a1.js")
+R.m(60412)
+module.exports=R.m(60412).exports
