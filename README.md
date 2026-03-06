@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/1aab1723-3912-462e-b35a-e5e4c
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+# PartyDial-Software
